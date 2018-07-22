@@ -30,6 +30,7 @@ class HomeController extends Controller {
     this.ctx.status = 200;
     //这里一定要设置，不然网页中无法显示图片
     this.ctx.set('Content-Type', 'image/svg+xml') ;
+    //captcha.data 是svg二进制数据
     this.ctx.body=captcha.data;
   }
 
