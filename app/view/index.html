@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>图片验证码</h2>
+<form action="/form?_csrf={{ ctx.csrf |  safe }}" method="post" enctype="multipart/form-data">
+    <ul>
+        <li>验证码: <input name="name" type="text" /></li>
+        <li><img src="http://127.0.0.1:7001/getImage"  alt="验证码" /></li>
+        <li><input type="submit" value="提交" /></li>
+    </ul>
+</form>
+
+</body>
+</html>
